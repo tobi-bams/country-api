@@ -1,0 +1,379 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0 auto;
+    font-family: poppins;
+    padding: 0;
+    background-color: hsl(207, 26%, 17%);
+    font-size: 14px;
+    transition: background 0.2s linear;
+    width: 100%;
+}
+
+body.dark{
+    background-color: hsl(0, 0%, 98%);
+}
+
+
+p, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    height: 4em;
+    transition: background 0.2s linear;
+}
+
+body.dark header{
+   background-color: hsl(0, 0%, 100%);
+   color: hsl(200, 15%, 8%);
+}
+
+h1{
+    font-size: 1em;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1em;
+    margin-left: 1em;
+    font-weight: 300;
+}
+
+#darkmode{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toggle{
+    opacity: 0;
+    position: absolute;
+}
+
+label{
+  cursor: pointer;
+}
+
+main{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+form{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+body.dark select{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 15%, 8%);
+}
+
+select{
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    outline: none;
+    border: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 14em;
+    padding-left: 2em;
+    padding-right: 2em;
+    transition: background 0.2s linear;
+    border-radius: 6px;
+}
+
+#searchContainer{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: hsl(209, 23%, 22%);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    color: hsl(0, 0%, 100%);
+    height: 3.1em;
+    margin-bottom: 1em;
+    transition: background 0.2s linear;
+}
+
+body.dark #searchContainer{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 15%, 8%);
+}
+input[type=text]{
+    background-color: hsl(209, 23%, 22%);
+    border: none;
+    outline: none;
+    color: hsl(0, 0%, 100%);
+    padding-left: 3em;
+    transition: background 0.2s linear;
+}
+
+.searchIcon{
+    padding-left: 2em;
+}
+
+body.dark input[type=text]{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 52%);
+}
+
+body.dark ::placeholder{
+    color: hsl(200, 15%, 8%);
+}
+
+::placeholder{
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+}
+
+#countries{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2em;
+}
+
+.country{
+    width: 100%;
+    height: 25em;
+    margin-bottom: 1em;
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body.dark .country{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 15%, 8%);
+    transition: background 0.2s linear;
+}
+
+.countryImageCotainer{
+    width: 100%;
+    height: 12em;
+    box-sizing: border-box;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+}
+
+.countryInfo{
+    padding-left: 1.5em;
+}
+
+h2{
+    font-weight: 800;
+    margin-top: 0.5em;
+}
+
+span{
+    font-weight: 400;
+}
+
+p{
+    font-weight: 600;
+    margin-top: 0.8em;
+}
+
+.button button{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(209, 23%, 22%);
+    border: none;
+    outline: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body.dark .button button{
+    color: hsl(200, 15%, 8%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+#left{
+    margin-right: 0.5em;
+}
+
+.countryDetail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.flag{
+    width: 100%;
+}
+
+.flag img{
+    max-width: 100%;
+}
+
+#countryAbout{
+    color: hsl(0, 0%, 100%);
+}
+
+body.dark #countryAbout{
+    color: hsl(200, 15%, 8%);
+}
+
+#countryTitle{
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+#countryFirstInfo{
+    margin-bottom: 3em;
+}
+
+#countrySeconfInfo{
+    margin-bottom: 3em;
+}
+
+#border{
+    margin-bottom: 3em;
+}
+
+#border p{
+    margin-bottom: 1em;
+}
+
+#border button{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(209, 23%, 22%);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    width: 7.5em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+body.dark #border button{
+    color: hsl(200, 15%, 8%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.error{
+  margin-top: 4em;
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+}
+
+body.dark .error {
+  color: hsl(200, 15%, 8%);
+}
+
+.error h1{
+  font-size: 5em;
+  text-align: center;
+}
+
+@media(min-width: 736px){
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #searchContainer{
+        box-sizing: border-box;
+        width: 50%;
+
+    }
+
+    #countries{
+        box-sizing: border-box;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0%;
+        padding-right: 0%;
+        grid-gap: 2.5em;
+    }
+
+    .country{
+        width: 100%;
+        height: 27em;
+        margin-bottom: 1em;
+        background-color: hsl(209, 23%, 22%);
+        color: hsl(0, 0%, 100%);
+        box-sizing: border-box;
+    }
+}
+
+@media(min-width: 1200px){
+    #countries{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .country{
+        height: 25em;
+    }
+
+    .countryDetail{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .flag{
+        width: 50%;
+        margin-right: 10em;
+    }
+
+    #countryfullInfo{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #countrySeconfInfo{
+        margin-left: 4.5em;
+    }
+
+    #border{
+        display: flex;
+        align-items: center;
+    }
+
+    #border p{
+        margin-right: 1.5em;
+    }
+}

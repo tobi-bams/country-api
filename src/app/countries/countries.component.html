@@ -1,0 +1,31 @@
+<main>
+  <form>
+      <div id="searchContainer">
+          <i class="fa fa-search searchIcon" aria-hidden="true"></i>
+          <input type="text" placeholder="Search for a Country" id="search" [(ngModel)] = 'searchCountry' name="search">
+      </div>
+      <div>
+          <select [(ngModel)] = 'sortCountry' name = "select">
+              <option value = "all" name = "select">Filter By Region</option>
+              <option value = "africa" name = "select">Africa</option>
+              <option value = "americas" name = "select">America</option>
+              <option value = "asia" name = "select">Asia</option>
+              <option value = "europe" name = "select">Europe</option>
+              <option value = "oceania" name = "select">Oceania</option>
+          </select>
+      </div>
+  </form>
+  <div id="countries">
+      <div class="country" *ngFor = "let country of filteredCountry" [routerLink] = "['/countries', country.alpha3Code]">
+          <div class="countryImageCotainer">
+              <img [src]="country.flag" class="image">
+          </div>
+          <div class="countryInfo">
+              <h2>{{country.name}}</h2>
+              <p>Population: <span>{{country.population}}</span></p>
+              <p>Region: <span>{{country.region}}</span></p>
+              <p>Capital: <span>{{country.capital}}</span></p>
+          </div>
+      </div>
+  </div>
+</main>

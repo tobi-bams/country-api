@@ -1,0 +1,35 @@
+<main>
+  <div class="button">
+      <button [routerLink] = "['/countries']"><i class="fa fa-arrow-left" aria-hidden="true" id="left"></i> Back</button>
+  </div>
+  <div class="countryDetail" >
+      <div class="flag">
+          <img src="{{country?.flag}}">
+      </div>
+      <div id="countryAbout">
+          <div id="countryTitle">
+              <h2>{{country?.name}}</h2>
+          </div>
+          <div id="countryfullInfo">
+              <div id="countryFirstInfo">
+                  <p>Native Name: <span>{{country?.nativeName}}</span></p>
+                  <p>Polulation: <span>{{country?.population}}</span></p>
+                  <p>Region: <span>{{country?.region}}</span></p>
+                  <p>Sub-Region: <span>{{country?.subregion}}</span></p>
+                  <p>Capital: <span>{{country?.capital}}</span></p>
+              </div>
+              <div id="countrySeconfInfo">
+                  <p>Top Level Domain: <span>{{country?.topLevelDomain[0]}}</span></p>
+                  <p>Currencies: <span>{{country?.currencies[0].name}}</span></p>
+                  <p>Languages: <span > {{language}} </span></p>
+              </div>
+          </div>
+          <div id="border">
+              <p>Border Countries:</p>
+              <div>
+                  <button *ngFor = "let border of borders" [routerLink] = "['/countries', border.code]">{{border?.name}}</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
