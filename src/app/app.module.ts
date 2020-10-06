@@ -11,6 +11,7 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
 import { appRoutes } from './routes'
 import { RouterModule } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { ErrorComponent } from './error/error.component';
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
